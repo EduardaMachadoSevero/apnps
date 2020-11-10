@@ -12,12 +12,19 @@ app.set("view engine","ejs")
 app.use(express.static(path.join(__dirname,"public")))
 
 app.get('/',function(req,res){
-
-   res.send("Olá Eduarda Severo!")
+   res.render("index.ejs", {})
    
 })
 
-
+app.get('/usuarios',function(req,res){
+    res.render("usuarios.ejs", {usuarios:[
+        {nome:'Duda',email:'duda@hotmail.com'},
+        {nome:'Helena',email:'helena@hotmail.com'},
+        {nome:'João',email:'joao@hotmail.com'},
+        {nome:'Ana',email:'ana@hotmail.com'}
+    ] })
+    
+ })
 app.listen(3000, function(){
 
     console.log('Conexão inicializada')

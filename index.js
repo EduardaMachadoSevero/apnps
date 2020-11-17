@@ -30,7 +30,7 @@ app.get('/usuarios',function(req,res){
      res.render('adiciona.ejs')
  })
  app.post('/add', function(req,res){
-     console.log("Nome: " + req.body.txtNome + " Email " + req.body.txtEmail)
+     console.log("Nome iii: " + req.body.txtNome + " Email " + req.body.txtEmail)
  })
 
 app.listen(3000, function(){
